@@ -13,3 +13,4 @@ if has ('gui_running')
     set transparency=15
     set guifont=Monaco:h13
 endif
+setlocal spell spelllang=en_au
