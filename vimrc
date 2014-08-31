@@ -1,7 +1,15 @@
-call pathogen#infect()
-filetype on
+set nocompatible
 filetype off
-call pathogen#runtime_append_all_bundles()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
+Bundle 'gmarik/vundle'
+Bundle 'wincent/Command-T'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-surround'
+Bundle 'davidhalter/jedi-vim'
+call vundle#end()
+filetype plugin indent on
 syntax enable
 set backspace=indent,eol,start
 set tabstop=4
@@ -46,3 +54,6 @@ inoremap <Right> <NOP>
 inoremap <Up>    <NOP>
 inoremap <Down>  <NOP>
 set timeoutlen=200
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+:set relativenumber
