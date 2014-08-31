@@ -1,7 +1,9 @@
 call pathogen#infect()
+filetype on
 filetype off
 call pathogen#runtime_append_all_bundles()
 syntax enable
+set backspace=indent,eol,start
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -13,8 +15,8 @@ set number
 set list
 set listchars=tab:>.
 if has ('gui_running')
-    set transparency=15
-    set guifont=Monaco:h13
+    set transparency=5
+    set guifont=Menlo:h12
 endif
 setlocal spell spelllang=en_au
 let Tlist_Auto_Open = 1
@@ -38,3 +40,9 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
+inoremap kj <Esc>
+inoremap <Left>  <NOP>
+inoremap <Right> <NOP>
+inoremap <Up>    <NOP>
+inoremap <Down>  <NOP>
+set timeoutlen=200
