@@ -15,6 +15,13 @@ Bundle "Raimondi/delimitMate"
 Bundle 'scrooloose/nerdtree'
 Bundle 'jalcine/cmake.vim'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'rking/ag.vim'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-dispatch'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'groenewege/vim-less'
+"Bundle 'edkolev/tmuxline.vim'
 call vundle#end()
 filetype plugin indent on
 syntax enable
@@ -60,3 +67,16 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Workaround
 let g:CommandTTraverseSCM = 'pwd'
 let g:clang_user_options='|| exit 0'
+let g:ycm_auto_trigger = 1
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
+
+" Key binding for moving between panes
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
