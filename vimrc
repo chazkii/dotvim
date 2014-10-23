@@ -21,17 +21,23 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-dispatch'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'groenewege/vim-less'
+Plugin 'Keithbsmiley/swift.vim'
 "Bundle 'edkolev/tmuxline.vim'
 call vundle#end()
 filetype plugin indent on
 syntax enable
 
+" Default indent formatting
 set backspace=indent,eol,start
 set tabstop=4
 set shiftwidth=4
 set expandtab
-" set background=dark
-" colorscheme base16-default 
+
+" Color scheme
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=16
+
 set number
 set list
 set listchars=tab:>.
@@ -50,10 +56,10 @@ EOF
 
 " Enforce not using insert mode for navigation
 inoremap kj <Esc>
-inoremap <Left>  <NOP>
-inoremap <Right> <NOP>
-inoremap <Up>    <NOP>
-inoremap <Down>  <NOP>
+" inoremap <Left>  <NOP>
+" inoremap <Right> <NOP>
+" inoremap <Up>    <NOP>
+" inoremap <Down>  <NOP>
 set timeoutlen=200
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
